@@ -1,0 +1,15 @@
+.list {
+	font-size: 1.3em;
+	line-height: 1.5;
+	padding: 1em 0 1em 1.1em;
+	max-width: 960px;
+	margin: auto;
+}
+
+.item {
+	margin-bottom: 1em;
+}
+
+.item:last-child {
+	margin-bottom: 0;
+}

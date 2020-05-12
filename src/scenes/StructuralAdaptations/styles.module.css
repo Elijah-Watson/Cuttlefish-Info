@@ -1,0 +1,15 @@
+.youtubeIframeWrapper {
+	position: relative;
+	width: 100%;
+	padding-bottom: calc(100%/1.77777778); /* 16:9 */
+	height: 0;
+	border-radius: 0.5em;
+	overflow: hidden;
+}
+.youtubeIframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

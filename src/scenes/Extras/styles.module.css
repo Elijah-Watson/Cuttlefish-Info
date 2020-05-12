@@ -1,0 +1,27 @@
+.sectionHeading {
+	font-family: 'Capriola', sans-serif;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.sectionHeading:after {
+	content: ' ';
+	display: block;
+	height: 3px;
+	background-color: hsl(0, 0%, 30%);
+	border-radius: 0.5em;
+}
+
+.gallery {
+	margin: 2rem 0 1.5rem;
+}
+
+.section {
+	margin-bottom: 1.5rem;
+}
+
+.linkWrapper {
+	display: inline-block;
+	margin: 1em 0;
+}

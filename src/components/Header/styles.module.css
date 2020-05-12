@@ -1,0 +1,17 @@
+.header {
+	position: relative;
+	margin: 0;
+	padding: 3em 1em 0 1em;
+}
+
+.header::after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgb(43, 43, 43);
+	background: linear-gradient(0deg, rgba(26, 26, 26, 1) 0%, rgba(43, 43, 43, 1) 100%);
+	width: 100%;
+	height: calc(100% - 2rem);
+	z-index: -100;
+}

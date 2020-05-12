@@ -1,0 +1,107 @@
+.galleryWrapper {
+	max-width: 960px;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: center;
+}
+
+.gallery {
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5em;
+	overflow: hidden;
+}
+
+.focusedWrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	background-color: hsl(0, 0%, 30%);
+}
+
+.focusedImage {
+	object-fit: contain;
+	max-width: 100%;
+	width: 50rem;
+	max-height: 100%;
+	height: 30rem;
+}
+
+.focusedCaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0.5em 1em;
+	background-color: hsla(0, 0%, 0%, 80%);
+	color: white;
+	text-align: center;
+	font-style: italic;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.controls {
+	display: flex;
+	align-items: center;
+	font-size: 5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0ms 2s, opacity 500ms ease-in-out 1.5s;
+}
+
+.focusedWrapper:hover .controls {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0ms, opacity 250ms ease-in-out 0s;
+}
+
+.controlsBar {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.controlsBar > * {
+	cursor: pointer;
+	color: white;
+	padding: 0.5rem;
+	user-select: none;
+}
+
+.carousel {
+	position: relative;
+	padding: 0.6rem 0;
+	background-color: hsl(0, 0%, 15%);
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+.imagePreview {
+	object-fit: cover;
+	width: 4rem;
+	height: 4rem;
+	margin-right: 0.6rem;
+}
+
+.imagePreview:first-child {
+	margin-left: 0.6rem;
+}
+
+.imagePreview:last-child {
+	margin-right: 0.6rem;
+}
+
+.imagePreview.current {
+	box-shadow: 0 0 0 2px white;
+}

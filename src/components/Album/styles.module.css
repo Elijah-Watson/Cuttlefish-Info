@@ -1,0 +1,86 @@
+.album {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.item {
+	width: 8rem;
+	height: 6rem;
+	margin: 1rem;
+	object-fit: cover;
+	box-shadow: 1px 1px 5px 1px black;
+	cursor: pointer;
+}
+
+.imageBoxWrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsla(0, 0%, 0%, 80%);
+
+	z-index: 500;
+}
+
+.imageBox {
+	position: relative;
+	display: inline-block;
+}
+
+.imageBoxFigure {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50rem;
+	max-width: calc(90vw - 2rem);
+	height: 50rem;
+	max-height: calc(90vh - 2rem);
+	padding: 1rem;
+	background-color: hsl(0, 0%, 30%);
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.imageBoxImage {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
+.imageBoxCaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0.5em 1em;
+	background-color: hsla(0, 0%, 0%, 80%);
+	color: white;
+	text-align: center;
+	font-style: italic;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.imageBoxButton {
+	position: absolute;
+	bottom: 97.5%;
+	left: 97.5%;
+	width: 2rem;
+	height: 2rem;
+	padding: 0.5rem;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}

@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'gatsby';
 import styles from './styles.module.css';
 import classNames from 'classnames';
 
-interface Link {
+interface LinkData {
 	path: string;
 	text: string;
 }
@@ -21,8 +21,8 @@ const links = [
 export function NavBar() {
 	const linkList = useRef<HTMLUListElement>(null);
 	const [ linkWidths, setLinkWidths ] = useState<number[]>([]);
-	const [ visibleLinks, setVisibleLinks ] = useState<Link[]>(links);
-	const [ hiddenLinks, setHiddenLinks ] = useState<Link[]>([]);
+	const [ visibleLinks, setVisibleLinks ] = useState<LinkData[]>(links);
+	const [ hiddenLinks, setHiddenLinks ] = useState<LinkData[]>([]);
 	const [ loaded, setLoaded ] = useState<boolean>(false);
 	const getLinkWidths = () => {
 		const links = Array.from(linkList?.current?.childNodes || []) as HTMLElement[];
@@ -68,7 +68,7 @@ export function NavBar() {
 					{
 						visibleLinks.map(link => (
 							<li key={link.path}>
-								<NavLink exact to={link.path} className={styles.navItem} activeClassName={styles.active}>{link.text}</NavLink>
+								<Link to={link.path} className={styles.navItem} activeClassName={styles.active}>{link.text}</Link>
 							</li>
 						))
 					}
@@ -80,7 +80,7 @@ export function NavBar() {
 }
 
 interface AdditionalLinksProps {
-	links: Link[];
+	links: LinkData[];
 }
 
 function AdditionalLinks({ links }: AdditionalLinksProps) {
@@ -114,7 +114,7 @@ function AdditionalLinks({ links }: AdditionalLinksProps) {
 				{
 					links.map(link => (
 						<li key={link.path}>
-							<NavLink exact to={link.path} className={styles.additionalNavItem} activeClassName={styles.active} tabIndex={0} >{link.text}</NavLink>
+							<Link to={link.path} className={styles.additionalNavItem} activeClassName={styles.active} tabIndex={0} >{link.text}</Link>
 						</li>
 					))
 				}

@@ -19,7 +19,7 @@ export function SEO({ title, description, keywords, image }: SEOProps) {
 		image: `${siteUrl}${image || cuttlefish1}`
 	}
 	return (
-		<Helmet title={seo.title} titleTemplate={titleTemplate}>
+		<Helmet title={seo.title} titleTemplate={titleTemplate} defer={false} >
 			<meta name='description' content={seo.description} />
 			<meta name='image' content={seo.image} />
 			<meta name='keywords' content={seo.keywords} />

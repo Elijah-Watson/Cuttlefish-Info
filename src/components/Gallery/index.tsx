@@ -19,10 +19,11 @@ export function Gallery({ images }: GalleryProps) {
 		const activeOffset = active?.offsetLeft || 0;
 		const activeWidth = active?.offsetWidth;
 		const scrollTarget = activeOffset + activeWidth / 2 - carouselWidth / 2;
-		currentCarousel?.scrollTo({
+		/* currentCarousel?.scrollTo({
 			left: scrollTarget,
 			behavior: 'smooth'
-		});
+		}); */
+		if (currentCarousel) currentCarousel.scrollLeft = scrollTarget;
 	}
 	const decrementCurrent = useCallback(
 		() => {

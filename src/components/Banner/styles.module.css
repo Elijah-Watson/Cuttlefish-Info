@@ -25,6 +25,7 @@
 .bannerImage {
 	object-fit: cover;
 	width: 100%;
+	height: 100%;
 }
 
 .bannerContent {
@@ -53,7 +54,7 @@
 	margin-top: 1.5em;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 750px) {
 	.banner {
 		flex-direction: column;
 	}

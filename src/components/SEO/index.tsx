@@ -10,7 +10,7 @@ interface SEOProps {
 }
 
 export function SEO({ title, description, keywords, image }: SEOProps) {
-	const siteUrl = window.location.hostname;
+	const siteUrl = 'https://cuttlefish-info.com';
 	const titleTemplate = 'Cuttlefish: %s';
 	const seo = {
 		title: title || 'Info',

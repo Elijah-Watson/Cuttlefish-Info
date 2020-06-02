@@ -23,6 +23,7 @@ export function SEO({ title, description, keywords, image }: SEOProps) {
 			<meta name='description' content={seo.description} />
 			<meta name='image' content={seo.image} />
 			<meta name='keywords' content={seo.keywords} />
+			<html lang='en' />
 		</Helmet>
 	)
 }
